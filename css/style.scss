@@ -1,5 +1,5 @@
 
-$gold:#F5D032;
+$lightgold:#FFF699;
 
 
 @mixin links{
@@ -23,22 +23,31 @@ $gold:#F5D032;
 
 
 body{
-  margin:0 10%;
+  margin:0;
+  background:
+  linear-gradient(
+        rgba(255, 246, 153, 0.2),
+        rgba(255, 246, 153, 0.2)
+      ),
+  url("../images/grey_wash_wall.png");
+  background-position:center;
+  background-attachment:fixed;
 }
 
 
 header{
-  max-width:100%;
-  width:1018px;
+  width:80%;
+  margin-left:10%;
   height:175px;
   position:fixed;
   z-index:100;
-  background-color:white;
+  background-color:#fff;
   overflow:hidden;
 
 
   .navleft{
     float:left;
+    margin-left:8%;
 
     li{
       @include lists;
@@ -46,24 +55,28 @@ header{
         @include links;
       }
       .mybooks{
-        color:$gold;
-        border-top:2px solid black;
+        border:2px solid black;
+        background-color:$lightgold;
+        padding:1px;
       }
       a:hover{
-        color:$gold;
-        border-top:2px solid black;
+        border:2px solid black;
+        background-color:$lightgold;
+        padding:1px;
       }
     }
   }
   img{
     width:500px;
     float:left;
-    position:relative;
-    bottom:80px;
-    left:15px;
+    position:absolute;
+    left:24.3%;
+    right:25%;
+    bottom:-136px;
   }
   .navright{
-    float:left;
+    float:right;
+    margin-right:8%;
 
     li{
       @include lists;
@@ -71,36 +84,35 @@ header{
         @include links;
       }
       a:hover{
-        color:$gold;
-        border-top:2px solid black;
+        border:2px solid black;
+        background-color:$lightgold;
+        padding:1px;
       }
     }
   }
 }
 
-
 // main
 main{
   clear:both;
   overflow:hidden;
-  // border-bottom:1px solid black;
-  padding:0 15px 50px 15px;
+  background:
+  linear-gradient(
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)
+      ),
+  url("../images/books2.jpeg");
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
   position:relative;
   top:175px;
-
-  h1{
-    font-size:60px;
-    color:black;
-    display:inline-block;
-    border-top:3px solid $gold;
-    border-bottom:3px solid $gold;
-    text-transform:uppercase;
-    margin:0 0 5% 28.5%;
-  }
+  margin:0 10%;
 
   section{
-    width:49%;
+    width:46%;
     display:inline-block;
+    padding-left:37px;
 
     article{
       float:left;
@@ -113,11 +125,30 @@ main{
     aside{
       float:left;
       @include verticalalign;
+      color:white;
     }
     h3{
       text-align:center;
-      border-top:1px solid black;
-      border-bottom:1px solid black;
+      color:white;
+      // border-top:1px solid black;
+      // border-bottom:1px solid black;
+    }
+  }
+}
+
+footer{
+  clear:both;
+  height:100px;
+  background-color:$lightgold;
+  ul{
+    text-align:center;
+    @include verticalalign;
+    padding:0;
+    li{
+      display:inline;
+      text-decoration:none;
+      list-style-type:none;
+      padding:15px;
     }
   }
 }
