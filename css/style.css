@@ -13,14 +13,25 @@ header {
   z-index: 100;
   background-color: #fff;
   overflow: hidden; }
+  header .profileicons {
+    position: relative;
+    float: right;
+    bottom: 175px;
+    left: -2.5rem;
+    height: 200px;
+    width: 200px; }
+    header .profileicons img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain; }
   header .navleft {
-    clear: both;
     float: left;
     margin-left: 3%; }
     header .navleft li {
       padding: 10px;
-      display: inline-block;
-      margin-top: 115px; }
+      display: inline;
+      position: relative;
+      top: 127px; }
       header .navleft li a {
         text-decoration: none;
         text-transform: uppercase;
@@ -40,16 +51,17 @@ header {
     width: 500px;
     float: left;
     position: absolute;
-    left: 24.3%;
+    left: 26.4%;
     right: 25%;
     bottom: -136px; }
   header .navright {
     float: right;
-    margin-right: 6%; }
+    margin-right: -16%; }
     header .navright li {
       padding: 10px;
-      display: inline-block;
-      margin-top: 115px; }
+      display: inline;
+      position: relative;
+      top: 127px; }
       header .navright li a {
         text-decoration: none;
         text-transform: uppercase;
@@ -129,5 +141,87 @@ footer {
         text-transform: uppercase; }
       footer ul li a:hover {
         color: #F5D032; }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  header .profileicons {
+    position: relative;
+    float: right;
+    bottom: 175px;
+    left: -2.5rem;
+    height: 200px;
+    width: 200px; }
+  header .navleft {
+    float: left;
+    margin-left: 9%;
+    margin-top: 13px; }
+  header img {
+    width: 450px;
+    float: left;
+    position: absolute;
+    left: 15.4%;
+    right: 25%;
+    bottom: -91px; }
+  header .navright {
+    float: right;
+    margin-right: -23%;
+    margin-top: 13px; }
+
+  section {
+    max-width: 26%;
+    display: inline-block;
+    padding-left: 5rem;
+    padding-bottom: 20px;
+    padding-top: 20px; }
+    section aside {
+      text-align: center;
+      position: relative;
+      bottom: 45px;
+      left: 15px;
+      color: white;
+      font-size: 14px; } }
+@media (max-width: 767px) {
+  header {
+    min-width: 100%;
+    margin-left: 0; }
+    header img {
+      margin-left: 10%; }
+    header .profileicons {
+      display: none; }
+    header .navleft {
+      margin-left: 17%;
+      margin-top: 13px; }
+    header img {
+      width: 400px;
+      float: left;
+      position: absolute;
+      left: -9%;
+      right: 25%;
+      bottom: -67px; }
+    header .navright {
+      display: none; }
+
+  main {
+    border: none;
+    margin: 0; }
+    main section {
+      width: 100%;
+      display: block;
+      padding-bottom: 20px;
+      padding-top: 20px; }
+      main section article {
+        width: 100%; }
+        main section article .covercon {
+          height: 70%;
+          width: 70%; }
+          main section article .covercon img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            object-position: center; }
+        main section article aside {
+          position: relative;
+          bottom: 45px;
+          left: 15px;
+          font-size: 30px; } }
 
 /*# sourceMappingURL=style.css.map */
