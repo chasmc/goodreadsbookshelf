@@ -2,89 +2,15 @@
 $gold:#F5D032;
 
 @import "mixins";
-
+@import "header";
+@import "footer";
 
 body{
   margin:0;
   background-image:url("../images/books2.jpeg");
   background-size:cover;
-  // background:
-  // linear-gradient(
-  //       rgba(255, 246, 153, 0.7),
-  //       rgba(255, 246, 153, 0.7)
-  //     ),
-  // url("../images/grey_wash_wall.png");
   background-position:center;
   background-attachment:fixed;
-}
-
-
-header{
-  width:80%;
-  margin-left:10%;
-  height:175px;
-  position:fixed;
-  z-index:100;
-  background-color:#fff;
-  overflow:hidden;
-
-  .profileicons{
-    position:relative;
-    float:right;
-    bottom:175px;
-    left:-2.5rem;
-    height:200px;
-    width:200px;
-
-// logo
-    img{
-      height:100%;
-      width:100%;
-      object-fit:contain;
-    }
-  }
-
-  .navleft{
-    float:left;
-    margin-left:3%;
-
-    li{
-      @include lists;
-      a{
-        @include links;
-      }
-      .mybooks{
-        @include hover;
-      }
-      a:hover{
-        @include hover;
-      }
-    }
-  }
-  img{
-    width:500px;
-    float:left;
-    position:absolute;
-    left:26.4%;
-    right:25%;
-    bottom:-136px;
-  }
-
-  .navright{
-    float:right;
-    margin-right:-16%;
-
-
-    li{
-      @include lists;
-      a{
-        @include links;
-      }
-      a:hover{
-        @include hover;
-      }
-    }
-  }
 }
 
 // main section
@@ -117,38 +43,38 @@ main{
       margin-right:10%;
 
 // book cover image
-        .covercon{
-          height:17rem;
-          width:12rem;
+      .covercon{
+        height:17rem;
+        width:12rem;
 
-          img{
-            height:100%;
-            width:100%;
-            object-fit:contain;
-            object-position:center;
-          }
-        }
+      img{
+        height:100%;
+        width:100%;
+        object-fit:contain;
+        object-position:center;
+      }
+    }
 
 // title
-        h3{
-          text-align:center;
-          color:white;
-          font-size:18px;
-        }
+      h3{
+        text-align:center;
+        color:white;
+        font-size:18px;
+      }
 
 // bookmark and rate links
-        p{
-          text-align:center;
+      p{
+        text-align:center;
+        color:white;
+        a{
           color:white;
-          a{
-            color:white;
-            text-decoration:none;
-          }
-          a:hover{
-            color:$gold;
-          }
+          text-decoration:none;
+        }
+        a:hover{
+          color:$gold;
         }
       }
+    }
 
     aside{
       float:left;
@@ -158,49 +84,23 @@ main{
     }
   }
 }
-footer{
-  clear:both;
-  height:100px;
-  background-color:#fff;
-  ul{
-    text-align:center;
-    @include verticalalign;
-    padding:0;
-    li{
-      display:inline;
-      list-style-type:none;
-      padding:15px;
-      a{
-        text-decoration:none;
-        color:black;
-        text-transform:uppercase;
-      }
-      a:hover{
-        color:$gold;
-      }
-    }
-  }
-}
 
-
+// tablet
 @media(min-width:768px) and (max-width:1024px){
   header{
 
+    .navleft{
+      margin-left:9%;
+      margin-top:13px;
+    }
     .profileicons{
       position:relative;
       float:right;
       bottom:175px;
-      left:-2.5rem;
+      left:-1.7rem;
       height:200px;
       width:200px;
     }
-
-    .navleft{
-      float:left;
-      margin-left:9%;
-      margin-top:13px;
-    }
-
     img{
       width:450px;
       float:left;
@@ -237,30 +137,46 @@ footer{
   }
 }
 
+
+
+// mobile
 @media(max-width:767px){
   header{
-    min-width:100%;
+    width:100%;
+    height:130px;
     margin-left:0;
+
+    .burger{
+      display:inline;
+      position:relative;
+      left:225px;
+      top:130px;
+      img{
+        // height:100px;
+      }
+    }
+
     img{
       margin-left:10%;
     }
+
     .profileicons{
       display:none;
     }
 
     .navleft{
-
-      margin-left:17%;
-      margin-top:13px;
+      margin-left:20%;
+      position:relative;
+      bottom:25px;
     }
 
     img{
-      width:400px;
+      width:300px;
       float:left;
       position:absolute;
-      left:-9%;
+      left:4%;
       right:25%;
-      bottom:-67px;
+      bottom:-47px;
     }
 
     .navright{
@@ -272,40 +188,36 @@ footer{
 main{
   border:none;
   margin:0;
-//   section{
-//     width:100%;
-//     display:block;
-//     margin-right:30px;
-//     padding-bottom:20px;
-//     padding-top:20px;
-//
-// // info author section
-    // aside{
-    //   text-align:center;
-    //   position:relative;
-    //   bottom:45px;
-    //   left:15px;
-    //   color:white;
-    //   font-size:14px;
-    // }
-//   }
+  position:relative;
+  top:120px;
 
 section{
   width:100%;
   display:block;
-  // padding-left:5rem;
   padding-bottom:20px;
   padding-top:20px;
 
   article{
-    // float:left;
-    // margin-right:10%;
-    width:100%;
+    width:95%;
+
+    h3{
+      margin-right:40%;
+      font-size:30px;
+    }
+
+    p{
+      margin-right:40%;
+      border-bottom:1px solid white;
+      padding-bottom:70px;
+      font-size:30px;
+    }
 
 // book cover image
       .covercon{
         height:70%;
         width:70%;
+        position:relative;
+        right:5%;
 
         img{
           height:100%;
@@ -314,20 +226,12 @@ section{
           object-position:center;
         }
       }
+    }
+
       aside{
-        position:relative;
-        bottom:45px;
-        left:15px;
-        font-size:30px;
-        h3{
-
-        }
-        p{
-
-        }
+        display:none;
       }
 
-}
-}
-}
+    }
+  }
 }

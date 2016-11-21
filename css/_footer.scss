@@ -1,0 +1,23 @@
+footer{
+  clear:both;
+  height:100px;
+  background-color:#fff;
+  ul{
+    text-align:center;
+    @include verticalalign;
+    padding:0;
+    li{
+      display:inline;
+      list-style-type:none;
+      padding:15px;
+      a{
+        text-decoration:none;
+        color:black;
+        text-transform:uppercase;
+      }
+      a:hover{
+        color:$gold;
+      }
+    }
+  }
+}
