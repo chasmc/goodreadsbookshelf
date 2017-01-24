@@ -10,157 +10,160 @@ header{
   .burger{
     display:none;
   }
-  .profileicons{
+
+  .iconscontainer{
     position:relative;
-    float:right;
-    bottom:220px;
-    left:-2.5rem;
-    height:200px;
-    width:200px;
+    left:84%;
+    top:20px;
 
-// logo
-    img{
-      height:100%;
-      width:100%;
-      object-fit:contain;
+    .icons{
+      height:30px;
     }
   }
 
-  .navleft{
-    float:left;
-    margin-left:3%;
-
-    li{
-      @include lists;
-      a{
-        @include links;
-      }
-      .mybooks{
-        @include hover;
-      }
-      a:hover{
-        @include hover;
-      }
-    }
-  }
-
-  img{
-    width:500px;
-    float:left;
-    position:absolute;
-    left:25.7%;
-    right:25%;
-    bottom:-136px;
-  }
-
-  .navright{
-    float:right;
-    margin-right:-16%;
-
-
-    li{
-      @include lists;
-      a{
-        @include links;
-      }
-      a:hover{
-        @include hover;
-      }
-    }
-  }
-}
-
-// main section
-main{
-  clear:both;
-  overflow:hidden;
-  background:
-  linear-gradient(
-        rgba(0, 0, 0, 0.7),
-        rgba(0, 0, 0, 0.7)
-      ),
-  url("../images/books2.jpeg");
-  background-size:cover;
-  background-position:center;
-  background-attachment:fixed;
-  position:relative;
-  top:175px;
-  margin:0 10%;
-  border-bottom:1px solid white;
-
-  section{
-    width:40%;
-    display:inline-block;
-    padding-left:5rem;
-    padding-bottom:20px;
-    padding-top:20px;
-
-    article{
-      float:left;
-      margin-right:10%;
-
-// book cover image
-      .covercon{
-        height:17rem;
-        width:12rem;
-
-      img{
-        height:100%;
-        width:100%;
-        object-fit:contain;
-        object-position:center;
-      }
-    }
-
-// title
-      h3{
-        text-align:center;
-        color:white;
-        font-size:18px;
-      }
-
-// bookmark and rate links
-      p{
-        text-align:center;
-        color:white;
-        a{
-          color:white;
-          text-decoration:none;
-        }
-        a:hover{
-          color:$gold;
-        }
-      }
-    }
-
-    aside{
-      float:left;
-      @include verticalalign;
-      color:white;
-      font-size:14px;
-    }
-  }
-}
-
-footer{
-  clear:both;
-  height:100px;
-  background-color:#fff;
-  ul{
+  .headernav{
     text-align:center;
-    @include verticalalign;
-    padding:0;
+    position:relative;
+    bottom:38px;
+
+    .mybooks{
+      @include hover;
+    }
+
     li{
-      display:inline;
-      list-style-type:none;
-      padding:15px;
+      @include lists;
+
       a{
-        text-decoration:none;
-        color:black;
-        text-transform:uppercase;
+        @include links;
       }
       a:hover{
-        color:$gold;
+        @include hover;
+      }
+    }
+
+    .logo{
+      height:150px;
+      position:relative;
+      top:13px;
+    }
+
+    // dropdown menu
+    .dropdownmy{
+      display:none;
+      position:absolute;
+      top:28px;
+
+      li{
+        display:block;
+        background-color:white;
+        padding:5%;
+      }
+    }
+  }
+}
+
+
+
+
+@media(min-width:768px) and (max-width:1024px){
+  header{
+    width:100%;
+    margin:0;
+
+    .profileicons{
+      position:relative;
+      left:84%;
+      top:20px;
+    }
+
+    .icons{
+      height:30px;
+    }
+
+    .headernav{
+      text-align:center;
+      position:relative;
+      bottom:0;
+
+      li{
+        @include lists;
+
+        a{
+          @include links;
+          font-size:16px;
+        }
+
+        .logo{
+          height:110px;
+          position:relative;
+          top:13px;
+        }
+
+        .mybooks{
+          @include hover;
+        }
+
+        a:hover{
+          @include hover;
+        }
+      }
+    }
+  }
+}
+
+
+@media(max-width:767px){
+
+header{
+  width:100%;
+  height:130px;
+  margin-left:0;
+
+  .burger{
+    display:inline;
+    position:relative;
+    left:225px;
+    top:130px;
+
+    img{
+      height:20px;
+    }
+  }
+
+  .icons{
+    display:none;
+  }
+
+  .headernav{
+    text-align:center;
+    position:relative;
+    bottom:0;
+
+    li{
+      position:relative;
+      top:75px;
+      .mobilestay{
+
+      }
+    }
+
+      .logo-li{
+        position:relative;
+        top:-70px;
+        display:block;
+        margin:0 auto;
+
+        .logo{
+          height:80px;
+        }
+      }
+
+      a{
+        font-size:16px;
+      }
+
+      .mobilegone{
+        display:none;
       }
     }
   }
